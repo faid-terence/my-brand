@@ -1,0 +1,95 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+.header
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 150px;
+    height: 6rem;
+    border-bottom: 1px solid #ccc;
+
+}
+.header p
+{
+    font-size: 25px;
+    font-weight: bold;
+    color: #18bdfe;
+    display: none;
+}
+ul
+{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+}
+li a
+{
+    text-decoration: none;
+    color: #333;
+    margin-left: 30px;
+    display: none;
+}
+li a:hover
+{
+    color: #18bdfe;
+}
+.container
+{
+    display: flex;
+    margin: 3 rem 150px;
+
+}
+.cart
+{
+    width: 65%;
+    background-color:#e8dfec;
+    margin-left: 300px;
+}
+.top
+{
+   
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 30px 0;
+}
+table
+{
+    
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin-left: 0px;
+}
+.table-head
+{
+    color: white;
+    background-color:#302e4d;
+}
+.head-img
+{
+    text-align: left;
+    padding-left: 7px;
+}
+td
+{
+    border: 1px solid #ddd;
+  padding: 8px;
+}
+th
+{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white
+}
+tr:hover {background-color: #ddd;}

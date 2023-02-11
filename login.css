@@ -1,0 +1,134 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #e8dfec;
+}
+.box
+{
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 25px;
+    transform: translate(-50%, -50%);
+    background: white;
+    text-align: center;
+}
+.box input[type="text"], .box input[type="password"]
+{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid black;
+    padding: 14px 10px;
+    width:200px;
+    outline:none;
+    color:black;
+    border-radius: 24px;
+    transition: 0.3s;
+}
+.box textarea
+{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid black;
+    padding: 14px 10px;
+    width:200px;
+    height: 60px;
+    outline:none;
+    color:black;
+    border-radius: 24px;
+    transition: 0.3s;
+}
+.box h6{
+    color: black;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.box input[type="text"]:focus, .box input[type="password"]:focus
+{
+    width: 280px;
+    border-color:var(--skin-color) ;
+}
+.box textarea:focus
+{
+    width: 280px;
+    border-color:var(--skin-color) ;
+}
+.box input[type="submit"]
+{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid var(--skin-color);
+    padding: 14px 40px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.box input[type="submit"]:hover
+{
+    background: var(--skin-color);
+}
+
+
+
+
+@media only screen and (max-width:1224px)
+{
+    .sidebar
+    {
+        left: -345px;
+        z-index: 30;
+
+    }
+    .box
+    {
+        margin-left: 40px;
+    }
+
+}
+
+@media only screen and (max-width:860px)
+{
+    .box
+    {
+        margin-left: -50px;
+        font-size: 40px;
+    }
+    .box ::placeholder
+    {
+        font-size: 50px;
+    }
+}
+@media only screen and (max-width:500px)
+{
+    .box
+    {
+        margin-left: -240px;
+    }
+}
+
+@media only screen and (max-width:400px)
+{
+   .box
+   {
+    margin-left: -270px;
+   }
+   .box h6{
+    font-size: 14px;
+   }
+}
