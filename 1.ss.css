@@ -365,7 +365,7 @@ body
 {
     .box
     {
-        margin-left: -50px;
+        margin-left: -500px;
         font-size: 40px;
     }
     .box ::placeholder
@@ -379,14 +379,26 @@ body
     {
         margin-left: -240px;
     }
+    .form
+    {
+        left: -30px;
+    }
 }
 @media only screen and (max-width:400px)
 {
    .box
    {
-    margin-left: -270px;
+    margin-left: -300px;
    }
    .box h6{
     font-size: 14px;
    }
+}
+@media only screen and (max-width:400px)
+{
+    .box
+    {
+        margin-left: -400px;
+    }
+
 }

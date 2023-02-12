@@ -133,6 +133,10 @@ ul
     align-items: center;
     z-index: 10;
 }
+.navigation-bar.active
+{
+    left: 0px;
+}
 .nav-toggler{
     display: none;
 }
@@ -778,7 +782,9 @@ input[type="submit"]:hover
     .navigation-bar
     {
         left: -270px;
+        transition-duration:all 5s ease-in-out;
     }
+
 }
 .main-content
 {
@@ -886,5 +892,9 @@ input[type="submit"]:hover
 .nav-toggler i
 {
     display: block;
+}
+.nav
+{
+
 }
 }

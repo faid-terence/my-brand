@@ -24,16 +24,16 @@
     <div class="logo">
         <a href="a"><span>Te</span>rence</a>
     </div>
-    <div class="nav-toggler">  <i class="fa fa-bars"></i>
+    <div class="nav-toggler" onclick="toggleMenu();">  <i class="fa fa-bars"></i>
     </div>
     <ul class="nav">
 
         <li><a href="index.html" class="active"><i class="fa fa-home"></i>HOME</a></li>
         <li><a href="About.html"><i class="fa fa-user"></i>ABOUT ME</a></li>
         <li><a href="Skills.html"><i class="fa fa-list"></i>SKILLS</a></li>
-        <li><a href="portfolio2.html"><i class="fa fa-briefcase"></i>PORTFOLIO</a></li>
+        <li><a href="mywork.html"><i class="fa fa-briefcase"></i>PORTFOLIO</a></li>
         <li><a href="Contact.html"><i class="fa fa-comment"></i>CONTACT</a></li>
-        <li><a href="blogs.html"><i class="fab fa-blogger-b"></i>BLOG</a></li>
+        <li><a href="Blogs (2).html"><i class="fab fa-blogger-b"></i>BLOG</a></li>
         
     </ul>
   </div>
@@ -55,16 +55,11 @@
                 <img src="Images/profile.jpg" alt="admin profile" class="pic">
             </div>
             <div class="hi">
-                <a href="index1.html" class="btn hire me">LOGIN</a>
+                <a href="login.html" class="btn hire me">LOGIN</a>
             </div>
             </div>
         </div>
     </section>
-    <div class="nav-toggler">
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
-    </div>
     <!--Home End-->
     </div>
     <div class="style-switcher">
@@ -85,6 +80,11 @@
         </div>
 
     </div>
-   <script src="script-1.js"></script>
-   <script src="style-switcher.js"></script>
+    <script>
+        function toggleMenu()
+        {
+            const toggle=document.querySelector(".navigation-bar");
+            toggle.classList.toggle("active")
+        }
+    </script>
 </body>

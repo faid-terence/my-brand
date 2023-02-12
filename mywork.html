@@ -25,7 +25,7 @@
     <div class="logo">
         <a href="a"><span>Te</span>rence</a>
     </div>
-    <div class="nav-toggler"><i class="fa fa-bars"></i>
+    <div class="nav-toggler" onclick="toggleMenu();">  <i class="fa fa-bars"></i>
     </div>
     <ul class="nav">
 
@@ -102,3 +102,11 @@
              </div>
         </div>
     </section>
+    <script>
+        function toggleMenu()
+        {
+            const toggle=document.querySelector(".navigation-bar");
+            toggle.classList.toggle("active")
+        }
+    </script>
+</body>

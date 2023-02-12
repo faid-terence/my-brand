@@ -184,7 +184,7 @@ main
     
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 0rem 2.5rem;
+    grid-gap: 0rem 4rem;
    
 }
 .analytic
@@ -195,7 +195,9 @@ main
     display: flex;
     padding-left: 2rem;
     margin-bottom: 3rem;
+    border-radius: 25px;
 
+    margin-left: -40px;
 }
 .analytic-info h4
 {
@@ -223,13 +225,15 @@ main
 .revenue-card
 {
 
-    width: 17%;
+    width:50%;
    margin: 10px;
    background: #fff;
    text-align: center;
    border-radius: 20px;
    padding: 10px;
    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+   
+   margin-top: -20px;
 }
 .block-grid
 {
@@ -327,6 +331,7 @@ main
     display: flex;
     margin-top: 20px;
     font-size: 18px;
+    margin-left: -30px;
 }
 .main-skills .card
 {
@@ -367,6 +372,7 @@ main
 {
     margin-top: 20px;
     text-transform: capitalize;
+    margin-left: -30px;
 
 }
 .course-box
