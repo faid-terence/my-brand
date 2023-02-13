@@ -814,6 +814,44 @@ input[type="submit"]:hover
         flex: 0 0 100%;
         max-width: 100%;
     }
+    .about .about-content .personal-info
+    {
+        font-size: 30px;
+        margin-top: 40px;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .skills .skills-item
+    {
+        margin-top: 20px;
+    }
+    .personal-info .info-item,
+    .personal-info .info-item p span
+    {
+        font-size: 30px;
+    }
+    .about .about-content .personal-info .info-item p
+    {
+        font-size: 30px;
+    }
+    .about .about-content .about-text p
+    {
+       font-size: 30px;
+       line-height: 40px;
+    }
+    .about .about-content .personal-info .about-button
+    {
+        top: 40px;
+    }
+    .button
+    {
+
+        margin-top: 290px;
+    }
+    .about-text
+    {
+        font-size: 40px;
+    }
    .section
    {
     margin-left: -270px;
@@ -885,9 +923,10 @@ input[type="submit"]:hover
     right: 0;
     top: 0;
 }
-.icon
+
+.about-content
 {
-    display: ;
+    margin-top: 20px;
 }
 .nav-toggler i
 {
