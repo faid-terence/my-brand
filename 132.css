@@ -35,6 +35,7 @@ body {
     text-shadow: none;
     min-width: 100px;
     border-radius: 50px;
+    border-color: #E34724;
     line-height: 13px;
     }
     .table-title .add-new i {
@@ -104,3 +105,28 @@ th
     color: white
 }
 tr:hover {background-color: #ddd;}
+
+.btn 
+{
+    border-radius: 400px;
+}
+
+
+
+
+
+@media(max-width:600px)
+{
+table
+{
+    margin-top: 200px;
+}
+.container
+{
+    margin-top: 180px;
+}
+.table-title h2 {
+    margin: 6px 0 0;
+    font-size: 40px;
+    }
+}

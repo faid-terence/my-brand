@@ -180,6 +180,7 @@ ul
     display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
    
 }
 .navigation-bar .nav-toggler span{
@@ -823,7 +824,7 @@ input[type="submit"]:hover
     }
     .skills .skills-item
     {
-        margin-top: 20px;
+        margin-top: px;
     }
     .personal-info .info-item,
     .personal-info .info-item p span
@@ -846,7 +847,7 @@ input[type="submit"]:hover
     .button
     {
 
-        margin-top: 290px;
+        margin-top: 260px;
     }
     .about-text
     {
@@ -865,6 +866,23 @@ input[type="submit"]:hover
    {
     font-size: 20px;
    }
+   .navigation-bar .nav-toggler
+{
+    height: 40px;
+    width: 45px;
+    border: 1px solid var(--bg-black-50);
+    cursor: pointer;
+    position: absolute;
+    left: 350px;
+    top: 20px;
+    border-radius: 5px;
+    background: var(--bg-black-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+   
+}
 }
 @media (max-width:767px)
 {
