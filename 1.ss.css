@@ -308,7 +308,7 @@ body
     padding: 14px 10px;
     width:200px;
     outline:none;
-    color:white;
+    color:black;
     border-radius: 24px;
     transition: 0.3s;
 }
@@ -356,8 +356,17 @@ body
     }
     .box
     {
-        margin-left: 40px;
+        top: 500px;
+        left: 500px;
+        font-size: 50px;
     }
+    .box ::placeholder
+    {
+        font-size: 20px;
+    }
+    .box h6{
+        font-size: 20px;
+       }
 
 }
 
@@ -373,7 +382,7 @@ body
         font-size: 20px;
     }
 }
-@media only screen and (max-width:500px)
+@media only screen and(max-width:500px)
 {
     .box
     {
@@ -384,7 +393,7 @@ body
         left: -30px;
     }
 }
-@media only screen and (max-width:400px)
+@media only screen and(max-width:400px)
 {
    .box
    {

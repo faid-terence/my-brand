@@ -97,8 +97,20 @@ body
     }
     .box
     {
-        margin-left: 40px;
+        top: 500px;
     }
+    .box ::placeholder
+    {
+        font-size: 20px;
+    }
+    .box h6{
+        font-size: 25px;
+       }
+       .box input[type="text"], .box input[type="password"]
+       {
+        width:200px;
+        height: 80px;
+       }
 
 }
 

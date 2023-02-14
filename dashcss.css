@@ -356,12 +356,13 @@ main
 }
 .main-skills .card button
 {
-  background: orangered;
+  background: #ec1839;
+  color: white;
   padding: 7px 15px;
   border-radius: 10px;  
   margin-top: 15px;
   cursor: pointer;
-  border: 1px solid orangered;
+  border: 1px solid #ec1839;
 }
 .main-skills .card i
 {
@@ -424,7 +425,7 @@ main
 }
 .box button
 {
-    background: orangered;
+    background: #ec1839;
     margin-top: 20px;
     color: #fff;
     padding: 7px 10px;
@@ -451,7 +452,50 @@ main
     .main-skills
     {
         margin-left: -150px;
+        font-size: 30px;
+        display: inline;
 
+    }
+    .main-skills .card
+    {
+        width: 40%;
+    }
+    .main-skills .card h3
+    {
+        font-size: 35px;
+    }
+    .main-skills .card p
+    {
+        font-size: 30px;
+    }
+    .main-skills .card button
+    {
+        padding: 14px 25px;
+        border-radius: 10px; 
+    }
+    .main-course
+    {
+        margin-top: 50px;
+    }
+    .course-box .course
+    {
+        display: inline;
+    }
+    .course-box .course h3
+    {
+        font-size: 30px;
+    }
+    .course-box .course p
+    {
+        font-size: 30px;
+    }
+    .course-box ul li
+    {
+        font-size: 30px;
+    }
+    .card
+    {
+        flex-direction: column;
     }
     .sidebar
     {

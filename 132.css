@@ -25,7 +25,7 @@ body {
     }
     .table-title h2 {
     margin: 6px 0 0;
-    font-size: 22px;
+    font-size: 20px;
     }
     .table-title .add-new {
     float: right;
@@ -115,18 +115,31 @@ tr:hover {background-color: #ddd;}
 
 
 
-@media(max-width:600px)
+@media only screen and (max-width:1224px)
 {
-table
-{
-    margin-top: 200px;
-}
-.container
-{
-    margin-top: 180px;
-}
-.table-title h2 {
-    margin: 6px 0 0;
-    font-size: 40px;
+    th
+    {
+        font-size: 30px;
+        left: 10px;
+    }
+    .table-title h2
+    {
+        font-size: 50px;
+    }
+    td
+    {
+        font-size: 30px;
+    }
+    .table-title .add-new
+    {
+        font-size: 20px;
+        height: 40px;
+    }
+    table.table th:last-child
+    {
+        width: 50%;
+    } .table-wrapper
+    {
+        width: 100%;
     }
 }

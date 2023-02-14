@@ -534,7 +534,7 @@ h3.my-work
     padding-bottom:40px ;
 }
 .work .work-item
-{
+{   display: flex;
     margin-bottom: 20px;
     flex: 0 0 33.33%;
     max-width: 33.33%;
@@ -791,6 +791,10 @@ input[type="submit"]:hover
 {
     padding-left:0 ;
 
+}
+.work-item
+{
+    display: inline;
 }
 .about .about-content .personal-info .info-item p span
 {

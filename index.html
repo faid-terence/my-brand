@@ -63,7 +63,7 @@
     <!--Home End-->
     </div>
     <div class="style-switcher">
-        <div class="style-switcher-toggler s-icon">
+        <div class="style-switcher-toggler s-icon" onclick="styleSwitcher">
             <i class="fas fa-cog fa-spin"></i>
         </div>
         <div class="day-night s-icon">
@@ -86,5 +86,14 @@
             const toggle=document.querySelector(".navigation-bar");
             toggle.classList.toggle("active")
         }
+        function styleSwitcher()
+        {
+            const styleSwitcherToggle= document.querySelector(".style-switcher-toggler");
+            styleSwitcherToggle.style-switcher("open")
+
+        }
+    
     </script>
+    <script src="">
+        </script>
 </body>
