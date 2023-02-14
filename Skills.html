@@ -2,29 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width, initial-scale-1.0">
-    <title>Skills Page</title>
+    <meta http-equiv="X=UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width", minimum-scale="1",  maximum="1", initial-scale="1">
+    <title>Home Page</title>
 
     <!---Linking CSS Files to my HTML---> 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet"href="color.css">
     <!--CSS File which includes icons i will use-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet"href="color.css" class="alternate-style" title="color" disabled>
+    <link rel="stylesheet"href="color-2.css" class="alternate-style" title="color-2" disabled>
+    <link rel="stylesheet"href="color-3.css" class="alternate-style" title="color-3" disabled>
+    <link rel="stylesheet"href="color-4.css" class="alternate-style" title="color-4" disabled>
+    <link rel="stylesheet"href="color-5.css" class="alternate-style" title="color-5" disabled>
+    <link rel="stylesheet" href="style-switcher.css">
+</head>
+<body>
+  <!--Navigation bar menu-->  
+  <div class="navigation-bar">
+    <div class="logo">
+        <a href="a"><span>Te</span>rence</a>
+    </div>
+    <div class="nav-toggler" onclick="toggleMenu();">  <i class="fa fa-bars"></i>
+    </div>
+    <ul class="nav">
 
-    <body>
-        <div class="navigation-bar">
-            <div class="logo">
-                <a href="a"><span>Te</span>rence</a>
-            </div>
-            <ul class="nav">
-
-                <li><a href="index.html"><i class="fa fa-home"></i>HOME</a></li>
-                <li><a href="About.html"><i class="fa fa-user"></i>ABOUT ME</a></li>
-                <li><a href="Skills.html"class="active"><i class="fa fa-list"></i>SKILLS</a></li>
-                <li><a href="mywork.html"><i class="fa fa-briefcase"></i>PORTFOLIO</a></li>
-                <li><a href="Contact.html"><i class="fa fa-comment"></i>CONTACT</a></li>
-                <li><a href="blogs.html"><i class="fab fa-blogger-b"></i>BLOG</a></li>
-            </ul>
+        <li><a href="index.html" class="active"><i class="fa fa-home"></i>HOME</a></li>
+        <li><a href="About.html"><i class="fa fa-user"></i>ABOUT ME</a></li>
+        <li><a href="Skills.html"><i class="fa fa-list"></i>SKILLS</a></li>
+        <li><a href="mywork.html"><i class="fa fa-briefcase"></i>PORTFOLIO</a></li>
+        <li><a href="Contact.html"><i class="fa fa-comment"></i>CONTACT</a></li>
+        <li><a href="blogs.html"><i class="fab fa-blogger-b"></i>BLOG</a></li>
+        
+    </ul>
+  </div>
             <section class="skill section">
                 <div class="container">
                     <div class="row">
@@ -56,3 +68,10 @@
                     </div>
                 </div>
             </section>
+            <script>
+                function toggleMenu()
+                {
+                    const toggle=document.querySelector(".navigation-bar");
+                    toggle.classList.toggle("active")
+                }
+            </script>
