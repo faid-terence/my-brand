@@ -801,6 +801,10 @@ input[type="submit"]:hover
     display: block;
     margin-left: 0;
 }
+.section
+{
+    
+}
 @media (max-width:991px)
 {
     .blogs .blogs-item
