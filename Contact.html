@@ -16,7 +16,7 @@
     <link rel="stylesheet"href="color-4.css" class="alternate-style" title="color-4" disabled>
     <link rel="stylesheet"href="color-5.css" class="alternate-style" title="color-5" disabled>
     <link rel="stylesheet" href="style-switcher.css">
-
+</head>
     <body>
         <div class="navigation-bar">
             <div class="logo">
@@ -70,23 +70,23 @@
                     <h4 class="contact-sub-title padd-15">For a Quick Response</h4>
                     <!--Contact Form-->
                     <div class="row">
-                        <div class="contact-form padd-15">
+                        <div class="contact-form padd-15" onsubmit="sendEmail(); reset(); return false;">
                             <div class="row">
                                 <div class="form-item col-6 padd-15">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Your Full names">
+                                        <input type="text" id="name" class="form-control" placeholder="Your Full names" required on invalid="this.setCustomValidity('Please enter your name')" on input="this.setCustomValidity('')">
                                     </div>
                                 </div>
                                 <div class="form-item col-6 padd-15">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email Address">
+                                        <input type="email" id="email" class="form-control" placeholder="Email Address" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-item col-6 padd-15">
                                     <div class="form-group">
-                                        <textarea name="" class="form-control" id="" placeholder="Your Message"></textarea>
+                                        <textarea id="message" name="" class="form-control" id="" placeholder="Your Message" required></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -107,4 +107,22 @@
                     toggle.classList.toggle("active")
                 }
             </script>
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+            <script>
+                function sendEmail()
+                {
+                    Email.send({
+         Host : "smtp.gmail.com",
+         Username : "terencefaid@gmail.com",
+         Password : "password",
+         To : 'terencefaid@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "New Contact Form Enquiry",
+         Body : "And this is the body"
+       }).then(
+     message => alert(message)
+      );
+                }
+            </script>
+            
     </body>
