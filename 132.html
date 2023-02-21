@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    //
+//
+//        
+<input type="button" name="button" value="Button" />
+
+//
+//        
+<input type="checkbox" name="checkbox"/>
+
+//
+//        
+<input type="color" name="color"/>
+
+//
+//        
+<input type="date" name="date"/>
+
+//
+//        
+<input type="datetime-local" name="datetime-local"/>
+
+//
+//        
+<input type="email" name="email"/>
+
+//
+//        
+<input type="file" accept="image/*, text/*" name="file"/>
+
+//
+//        
+<input id="userId" name="userId" type="hidden" value="abc123">
+
+//
+//        
+<input type="image" name="image" src="" alt="image input"/>
+
+//
+//        
+<input type="month" name="month"/>
+
+//
+//        
+<input type="number" name="number"/>
+
+//
+//        
+<input type="password" name="password"/>
+
+//
+//        
+<input type="radio" name="radio"/>
+
+//
+//        
+<input type="range" name="range" min="0" max="25"/>
+
+//
+//        
+<input type="reset" name="reset"/>
+
+//
+//        
+<input type="search" name="search"/>
+
+//
+//        
+<input type="submit" name="submit"/>
+
+//
+//        
+<input type="tel" name="tel"/>
+
+//
+//        
+<input type="text" name="text"/>
+
+//
+//        
+<input type="time" name="time"/>
+
+//
+//        
+<input type="url" name="url"/>
+
+//
+//        
+<input type="week" name="week"/>
+
+//
+//        
+<input type="datetime" name="datetime"/>
+
+//Valid for text and search input types only, the dirname attribute enables the submission of the directionality of the element. When included, the form control will submit with two name/value pairs: the first being the name and value, the second being the value of the dirname as the name with the value of ltr or rtl being set by the browser.
+<form action="page.html" method="post">
+  <label
+    >Fruit:
+    <input type="text" name="fruit" dirname="fruit.dir" value="cherry" />
+  </label>
+  <input type="submit" />
+</form>
+<!-- page.html?fruit=cherry&fruit.dir=ltr -->
+
+
+//When an input element is given a name, that name becomes a property of the owning form element's HTMLFormElement.elements property. If you have an input whose name is set to guest and another whose name is hat-size, the following code can be used:
+let form = document.querySelector("form");
+
+let guestName = form.elements.guest;
+let hatSize = form.elements["hat-size"];
+
+
+//We can style a checkbox label based on whether the checkbox is checked or not. In this example, we are styling the color and font-weight of the <label> that comes immediately after a checked input. We haven't applied any styles if the input is not checked.
+<input id="checkboxInput" type="checkbox" />
+<label for="checkboxInput">Toggle the checkbox on and off</label>
+
+
+//<input id="checkboxInput" type="checkbox" />
+//<label for="checkboxInput">Toggle the checkbox on and off</label>
+//
+input:checked + label {
+  color: red;
+  font-weight: bold;
+}
+
+
+//It is possible to target different types of form controls based on their type using attribute selectors. CSS attribute selectors match elements based on either just the presence of an attribute or the value of a given attribute.
+/* matches a password input */
+input[type="password"] {
+}
+
+/* matches a form control whose valid values are limited to a range of values*/
+input[min][max] {
+}
+
+/* matches a form control with a pattern attribute */
+input[pattern] {
+}
+
+
+//By default, the appearance of placeholder text is a translucent or light gray. The ::placeholder pseudo-element is the input's placeholder text. It can be styled with a limited subset of CSS properties.
+::placeholder {
+  color: blue;
+}
+
+
+//HTML
+<label for="textInput">Note the red caret:</label>
+<input id="textInput" class="custom" size="32" />
+
+
+//CSS
+input.custom {
+  caret-color: red;
+  font: 16px "Helvetica", "Arial", "sans-serif";
+}
+
+
+//It does not suffice to have plain text adjacent to the <input> element. Rather, usability and accessibility requires the inclusion of either implicit or explicit <label>:
+<!-- inaccessible -->
+<p>Enter your name: <input id="name" type="text" size="30" /></p>
+
+<!-- implicit label -->
+<p>
+  <label>Enter your name: <input id="name" type="text" size="30" /></label>
+</p>
+
+<!-- explicit label -->
+<p>
+  <label for="name">Enter your name: </label>
+  <input id="name" type="text" size="30" />
+</p>
+
+
+//For the input types whose domain of possible values is periodic (that is, at the highest possible value, the values wrap back around to the beginning rather than ending), it's possible for the values of the max and min properties to be reversed, which indicates that the range of permitted values starts at min, wraps around to the lowest possible value, then continues on until max is reached. This is particularly useful for dates and times, such as when you want to allow the range to be from 8 PM to 8 AM:
+<input type="time" min="20:00" max="08:00" name="overnight" />
+
+
+//If there is an error, supporting browsers will both alert the user and prevent the form from being submitted. A word of caution: if a custom error is set to a truthy value (anything other than the empty string or null), the form will be prevented from being submitted. If there is no custom error message, and none of the other properties return true, valid will be true, and the form can be submitted.
+function validate(input) {
+  let validityState_object = input.validity;
+  if (validityState_object.valueMissing) {
+    input.setCustomValidity("A value is required");
+  } else if (validityState_object.rangeUnderflow) {
+    input.setCustomValidity("Your value is too low");
+  } else if (validityState_object.rangeOverflow) {
+    input.setCustomValidity("Your value is too high");
+  } else {
+    input.setCustomValidity("");
+  }
+}
+
+
+//If you want to present a custom error message when a field fails to validate, you need to use the Constraint Validation API available on <input> (and related) elements. Take the following form:
+<form>
+  <label for="name">Enter username (upper and lowercase letters): </label>
+  <input type="text" name="name" id="name" required pattern="[A-Za-z]+" />
+  <button>Submit</button>
+</form>
+
+
+//If you wanted to instead display custom error messages, you could use JavaScript like the following:
+const nameInput = document.querySelector("input");
+
+nameInput.addEventListener("input", () => {
+  nameInput.setCustomValidity("");
+  nameInput.checkValidity();
+});
+
+nameInput.addEventListener("invalid", () => {
+  if (nameInput.value === "") {
+    nameInput.setCustomValidity("Enter your username!");
+  } else {
+    nameInput.setCustomValidity(
+      "Usernames can only contain upper and lowercase letters. Try again!"
+    );
+  }
+});
+
+
+//The following is an example of how to associate the <label> with an <input> element in the above style. You need to give the <input> an id attribute. The <label> then needs a for attribute whose value is the same as the input's id.
+<label for="peas">Do you like peas?</label>
+<input type="checkbox" name="peas" id="peas" />
+
+
+
+</body>
+</html>

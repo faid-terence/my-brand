@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* base styles */
+body {
+  background: : #f2f2fc;
+  font-family: 'Roboto';
+  color: #444;
+  max-width: 960px;
+  margin: 100px auto;
+  padding: 10px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+nav h1 {
+  margin: 0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  background: #ec1839;
+  padding: 10px;
+  border-radius: 10px;
+}
+a:hover
+{
+    transform: scale(1.05);
+}
+form {
+    max-width: 500px;
+}
+form input {
+  width: 100%;
+}
+input
+{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid black;
+    padding: 14px 10px;
+    width:200px;
+    outline:none;
+    color:black;
+    border-radius: 24px;
+    transition: 0.3s;
+}
+textarea {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid black;
+    padding: 14px 10px;
+    width:500px;
+    height: 60px;
+    outline:none;
+    color:black;
+    border-radius: 24px;
+    transition: 0.3s;;
+}
+textarea {
+  min-height:200px;
+}
+/* post list */
+.post {
+
+  padding: 16px;
+  background: gray;
+  border-radius: 10px;
+  margin: 20px 0;
+  font-size: 16px;
+  top: 40px;
+  width: 50%;
+}
+.post h1 {
+    top: 30px;
+  margin: 0;
+  font-size: 16px;
+}
+.post p {
+    margin-top: 0;
+}
+.post a {
+  color:#ec1839 ;
+}
+button
+{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 6px 35px;
+    position: absolute;
+    color: white;
+    border-radius: 20px;
+    display: inline-block;
+    white-space: nowrap;
+    border: none;
+    background: #ec1839;
+    transition: all 0.3s ease;
+}
+button:hover
+{
+    transform: scale(1.05);
+}
+.hi
+{
+    top: 175px;
+    left: 700px;
+}
+h1
+{
+    font-size: 16px;
+}
