@@ -1,3 +1,4 @@
+let articleid="";
 const container = document.querySelector('.blogs');
 const searchForm = document.querySelector('.search');
 
@@ -11,15 +12,65 @@ const renderPosts = async (term) => {
     let template = '';
     posts.forEach(post => {
         template += `
-            <div class="post">
-                <h1>${post.title}</h1>
-                <p><small>${post.views} Views</small></p>
-                <p>${post.body.slice(0, 200)}</p>
-                <a href="details.html?id=${ post.id }"><button>Read more...</button></a>
-            </div>
+        <tr>
+      <th>No</th>
+      <th>Icon </th>
+      <th>Title</th>
+      <th>Body</th>
+      <th>Actions</th>
+      </tr>
+      </thead>
+        <tr>
+        <td>${post.id}</td>
+        <td>${post.icon}</td>
+        <td>${post.title}</td>
+        <td>${post.body.slice(0, 200)}</td>
+        <td>
+        <a class="edit" type="button" title="Edit" data-toggle="tooltip" onClick ="openModel(${post.id})"><i class="material-icons">&#xE254;</i></a>
+        <a class="delete" type="button" title="Delete" data-toggle="tooltip" onClick="deleteBlog(${post.id})"><i class="material-icons">&#xE872;</i></a>
+        </td>
+        </tr>
         `
     })
+
     container.innerHTML = template;
+}
+const deleteBlog=async(blogid)=>
+{
+    await fetch(`http://localhost:3000/posts/${blogid}`,{
+        method:"DELETE",
+    });
+}
+const modelBox=document.getElementById("modelbox");
+const form=document.getElementById("newform");
+modelBox.style.display="none";
+const openModel=async(blogid)=>
+{
+    const response= await fetch(`http://localhost:3000/posts/${blogid}`);
+        const post=await response.json();
+    
+        modelBox.style.display="block";
+        form.icon.value=post.icon;
+        form.title.value=post.title;
+        form.body.value=post.body;
+        articleid=post.id;
+}
+const updateBlog=async()=>
+{
+    const getData={
+        icon:form.icon.value,
+        title:form.title.value,
+        body:form.body.value,
+    }
+    const response= await fetch(`http://localhost:3000/posts/${articleid}`,
+    {
+        method:"PUT",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify(getData),
+    });
+    alert("Updated Successfully");
 }
 searchForm.addEventListener('submit', e => {
     e.preventDefault();
