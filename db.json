@@ -3,44 +3,14 @@
     {
       "id": 1,
       "title": "Software Development",
-      "body": "Software development refers to a set of computer science activities dedicated to the process of creating, designing, deploying and supporting software Click the read more button to know more",
-      "views": 30
+      "body": "Positive Impact",
+      "icon": "fa-regular fa-code"
     },
     {
-      "id": 2,
-      "title": "Artificial Intelligence",
-      "body": "Artificial intelligence is the simulation of human intelligence processes by machines, especially computer systems. Click the button below to know more about AI",
-      "views": 20
-    },
-    {
-      "id": 3,
-      "title": "Social Medias",
-      "body": "are interactive technologies that facilitate the creation and sharing of information, ideas, interests, and other forms of expression through! Here are some negative impacts of Social media to the society",
-      "views": 31
-    },
-    {
-      "id": 4,
-      "title": "Web Designing",
-      "body": "Software development refers to a set of computer science activities dedicated to the process of creating, designing, deploying and supporting software Click the read more button to know more",
-      "views": 1500
-    },
-    {
-      "title": "Hello Terence",
-      "body": "Hello , Dev \nI am testing my code",
-      "views": 10,
-      "id": 5
-    },
-    {
-      "title": "Team Predators",
-      "body": "We're Developers",
-      "views": 10090,
-      "id": 6
-    },
-    {
-      "title": "Artificial Intelligence",
-      "body": "This is the latest computing technology!",
-      "views": 10090,
-      "id": 7
+      "icon": "fa fa-laptop-code",
+      "title": "Social Media",
+      "body": "Negative Impact",
+      "id": 2
     }
   ]
 }
