@@ -2,9 +2,10 @@ const form = document.querySelector('form');
 const createPost = async (e) => {
     e.preventDefault();
     const doc = {
+        icon: form.icon.value,
         title: form.title.value,
-        body: form.body.value,
-        views: 10090
+        body: form.body.value
+        
     }
     await fetch('http://localhost:3000/posts', {
         method: 'POST',
