@@ -1,0 +1,50 @@
+<tbody>
+<tr>
+<td>1</td>
+
+<td>Computer Evloution</td>
+<td>Artificial Intelligence</td>
+<td> It's very Important</td>
+<td>
+<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+<a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+<a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+</td>
+</tr>
+</tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const postBlogs=async()=>
+{
+    const res2 =await fetch (`http://localhost:3000/posts`);
+    const client=await res2.json();
+    let temple='';
+    client.forEach(post => {
+        temple += `
+        <div class="card">
+        <i class= "${post.icon}"></i>
+        <h5>${post.title}</h5>
+        <p>${post.body.slice(0, 200)}</p>
+        <p style="text-align: center;">
+        <a class="button" href="">Read More</a></p>
+        </div>
+
+        `
+    })
+    blogsContainer.innerHTML=temple;
+
+}
